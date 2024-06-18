@@ -26,20 +26,13 @@ To run this project, ensure you have Python 3.11 or lower installed. Follow the 
    cd medical-translation-improvement
    ```
 
-2. Create a virtual environment and activate it:
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-
-3. Install the required dependencies:
+2. Install the required dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Download the necessary FastText models:
+3. Download the necessary FastText models:
    ```python
    import fasttext.util
    fasttext.util.download_model('en', if_exists='ignore')
