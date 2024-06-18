@@ -11,6 +11,10 @@ The project involves:
 - Applying orthogonal Procrustes alignment to improve the translation quality.
 - Evaluating translation accuracy using BLEU scores.
 
+## Motivation
+
+Medical translations require precision to avoid misunderstandings that could impact patient care. Traditional bilingual dictionaries require constant updates, which is time-consuming and impractical. Tools like Google Translate often produce translations that, while technically correct, are not commonly used by native speakers. For example, Google Translate might translate "stroke" as "ataque" (attack), which is vague and potentially misleading. Our method correctly translates it as "infarto," a more precise term in medical contexts.
+
 ## Installation
 
 To run this project, ensure you have Python 3.11 or lower installed. Follow the steps below to set up the environment:
