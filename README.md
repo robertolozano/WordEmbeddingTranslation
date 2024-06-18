@@ -39,6 +39,33 @@ To run this project, ensure you have Python 3.11 or lower installed. Follow the 
    fasttext.util.download_model('es', if_exists='ignore')
    ```
 
+## Approach
+
+1.  Load Pre-trained FastText Word Embeddings
+    The project starts by loading pre-trained FastText word embeddings for both English and Spanish. These embeddings capture the semantic meaning of words in both languages.
+
+2.  Create a Bilingual Dictionary
+    We use a bilingual dictionary containing common medical terms to train our model. This dictionary provides a reference for how words in English should translate into Spanish.
+
+3.  Align Vector Spaces
+    Using orthogonal Procrustes analysis, we align the English word vectors with their corresponding Spanish word vectors. This step ensures that the vector spaces of both languages are optimally mapped to each other, preserving semantic relationships.
+
+4.  Normalize Vectors
+    After alignment, we normalize the vectors to ensure uniformity and improve the accuracy of nearest neighbor searches.
+
+5.  Implement Translation Methods
+    We implement three translation methods:
+
+        1.  Dictionary Lookup: Directly translating words using the bilingual dictionary.
+        2.  Google Translate: Using the Google Translator API for translations.
+        3.  Improved Method: Translating words using the aligned word embeddings and nearest neighbors search.
+
+6.  Evaluate Translation Accuracy
+    We evaluate the translation accuracy using BLEU scores, which measure how closely the translated text matches a reference translation.
+
+7.  Visualize Word Embeddings
+    We visualize the word embeddings before and after alignment to illustrate the effectiveness of the alignment process.
+
 ## Usage
 
 1. Ensure the word embedding models (`cc.en.300.bin` and `cc.es.300.bin`) are in the project directory.
