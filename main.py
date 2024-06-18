@@ -8,7 +8,7 @@ import nltk
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
-g
+
 #README: word embeddings must be in same file as final_project.propert
 #IMPORTANT: BlEU_SCORE LIBRARY IS ONLY SUPPORTED IN PYTHON 3.11 AND LOWER!!!
 #INCLUDED IN ZIP FILE ARE .GZ files, PLEASE UNCOMPRESS THOSE TO GET .bin files
